@@ -1,7 +1,6 @@
 import React from 'react';
 import PlayerCard from './PlayerCard';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles(theme => ({
@@ -25,7 +24,7 @@ const PlayerList = ({ players }) =>{
         
         <div className = {classes.root}>
             <Grid container spacing={1}>
-            {players.map(player => <Grid item xs={3}><Paper className={classes.paper}><PlayerCard player={player} /></Paper></Grid>)}
+            {players.map(player => <Grid item xs={3}><PlayerCard player={player} /></Grid>)}
             </Grid>
         </div>
     );
